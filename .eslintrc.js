@@ -5,7 +5,10 @@ const ERROR = 2;
 const REACT_RULES = {
   'react/react-in-jsx-scope': OFF,
   'react-hooks/exhaustive-deps': ERROR,
-  'react/jsx-curly-brace-presence': [WARN, {props: 'never', children: 'never'}],
+  'react/jsx-curly-brace-presence': [
+    WARN,
+    { props: 'never', children: 'never' },
+  ],
   'react/no-unstable-nested-components': WARN,
   'react-native/no-color-literals': OFF,
   'react-native/sort-styles': OFF,
@@ -15,7 +18,7 @@ const REACT_RULES = {
 const ESLINT_RULES = {
   'no-shadow': OFF,
   'no-empty-function': ERROR,
-  'no-console': [ERROR, {allow: ['warn', 'error']}],
+  'no-console': [ERROR, { allow: ['warn', 'error'] }],
 };
 
 const TYPESCRIPT_RULES = {
