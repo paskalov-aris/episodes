@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1013224050883",
+    "project_id": "episodes-e911d",
+    "storage_bucket": "episodes-e911d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013224050883:android:ae9e79ea304a42d45c5276",
+        "android_client_info": {
+          "package_name": "com.episodes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCifaM-_hrAchCInQT1Ja2d96D1jT3Ql1s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
