@@ -1,16 +1,17 @@
 import { StyleSheet } from 'react-native';
-import { NUNITO_SANS } from '../../constants/fonts';
 import { COLORS } from '../../constants/colors';
+import { NUNITO_SANS } from '../../constants/fonts';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: COLORS.darkGray,
+    flexDirection: 'row',
   },
-  text: {
+  alignLeft: {
+    flex: 1,
+  },
+  title: {
     color: COLORS.white,
-    fontFamily: NUNITO_SANS.regular,
+    fontFamily: NUNITO_SANS.bold,
+    fontSize: 20,
   },
 });
