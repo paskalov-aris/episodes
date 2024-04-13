@@ -6,7 +6,7 @@ export const HomeScreen: FC = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Home screen</Text>
+        <Text style={styles.text}>Home screen</Text>
       </View>
     </SafeAreaView>
   );
