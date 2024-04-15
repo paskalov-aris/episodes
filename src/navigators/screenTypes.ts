@@ -21,6 +21,11 @@ export type RootStackScreenOptions<RouteName extends keyof RootStackParamList> =
         navigation: RootStackScreenProps['navigation'];
       }) => NativeStackNavigationOptions);
 
+export type HomeScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Home'
+>;
+
 export type ViewEpisodesScreenProps = NativeStackScreenProps<
   RootStackParamList,
   'ViewEpisodes'

@@ -5,4 +5,5 @@ export interface CarouselProps {
   books: Book[];
   type: SectionType;
   title?: string;
+  onCarouselItemPress: (playlistUrl: string) => void;
 }

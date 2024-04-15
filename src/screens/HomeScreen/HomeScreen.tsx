@@ -1,15 +1,32 @@
-import { FC } from 'react';
+import { FC, useCallback } from 'react';
 import { FlatList, ListRenderItemInfo, SafeAreaView, View } from 'react-native';
 import { styles } from './homeScreen.styles';
 import sections from '../../../sections.json';
 import { Section } from '../../models/Section';
 import { Carousel } from '../../components/Carousel/Carousel';
+import { HomeScreenProps } from '../../navigators/screenTypes';
 
-const renderItem = ({ item }: ListRenderItemInfo<Section>) => {
-  return <Carousel {...item} key={item.id} />;
-};
+export const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
+  const handleCarouselItemPress = useCallback(
+    (playlistUrl: string) => {
+      navigation.navigate('ViewEpisodes', { playlistUrl });
+    },
+    [navigation],
+  );
 
-export const HomeScreen: FC = () => {
+  const renderItem = useCallback(
+    ({ item }: ListRenderItemInfo<Section>) => {
+      return (
+        <Carousel
+          {...item}
+          key={item.id}
+          onCarouselItemPress={handleCarouselItemPress}
+        />
+      );
+    },
+    [handleCarouselItemPress],
+  );
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
