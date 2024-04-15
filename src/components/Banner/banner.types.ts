@@ -1,8 +1,3 @@
-import { ImageSourcePropType } from 'react-native';
+import { Book } from '../../models/Book';
 
-export interface BannerProps {
-  title: string;
-  author: string;
-  genre: string;
-  image: ImageSourcePropType;
-}
+export type BannerProps = Book;

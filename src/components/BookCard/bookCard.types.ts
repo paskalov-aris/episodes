@@ -1,8 +1,3 @@
-import { ImageSourcePropType } from 'react-native';
+import { Book } from '../../models/Book';
 
-export interface BookCardProps {
-  name: string;
-  image: ImageSourcePropType;
-  isComingSoon?: boolean;
-  releaseDate?: string;
-}
+export type BookCardProps = Book;
