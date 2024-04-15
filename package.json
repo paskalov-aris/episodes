@@ -11,7 +11,7 @@
     "packages:install": "yarn install",
     "packages:uninstall": "rm -rf node_modules/",
     "packages:reinstall": "yarn run packages:uninstall && yarn run packages:install",
-    "gems:install": "bundle install --path vendor/bundle",
+    "gems:install": "bundle install",
     "gems:uninstall": "rm -rf vendor/ .bundle/",
     "gems:reinstall": "yarn run gems:uninstall && yarn run gems:install",
     "pods:install": "bundle exec pod install --project-directory=ios",
