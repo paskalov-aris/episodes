@@ -5,11 +5,12 @@ import sections from '../../../sections.json';
 import { Section } from '../../models/Section';
 import { Carousel } from '../../components/Carousel/Carousel';
 import { HomeScreenProps } from '../../navigators/screenTypes';
+import { Playlist } from '../../models/Playlist';
 
 export const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
   const handleCarouselItemPress = useCallback(
-    (playlistUrl: string) => {
-      navigation.navigate('ViewEpisodes', { playlistUrl });
+    (playlists: Playlist[]) => {
+      navigation.navigate('ViewEpisodes', { playlists });
     },
     [navigation],
   );

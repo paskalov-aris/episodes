@@ -3,11 +3,12 @@ import {
   NativeStackNavigationOptions,
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
+import { Playlist } from '../models/Playlist';
 
 export type RootStackParamList = {
   Home: undefined;
   ViewEpisodes: {
-    playlistUrl: string;
+    playlists: Playlist[];
   };
 };
 

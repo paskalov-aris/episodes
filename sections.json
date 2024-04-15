@@ -10,7 +10,16 @@
             "author": "Dustin's Gamble",
             "genre": "Romance",
             "imageUrl": "https://s3-alpha-sig.figma.com/img/4053/9eff/4dae9f901dbd7be79aafae929dbd9474?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CjslKGenTRKtuQo7VivxOTO-quXBEUajXX7F9XK0HKBJMx7090hPtgkwjSd12XShbHuJRRq3zgYxDkR0ZgMoSKGZTU-tpLK8CK4tWvdf43l3c40HCuTHzHZswzty69wuSAu~Tl88TyiHA3ew8hgKTHpDpOacB~AFemITBdWKMvaLIvL3hSkqx-w~-y2ESf-Gu~4cFW8Iz4GQ5292fjaKHSGSymTSWNz64t~VxR8yGbGVT-E2a72PF3CrtT~F01~jeBEKO5zjWNrmz55nz8r0fqoNbYNZCKG8FG~0TdoNIF3nyFJemyfACNSIdBraIyJem1sx-cirL7T4H6P5RpKZzg__",
-            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/convertedwife.m3u8"
+            "playlists": [
+              {
+                "id": 1,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/convertedwife.m3u8"
+              },
+              {
+                "id": 2,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/2wife2.m3u8"
+              }
+            ]
           },
           {
             "id": 2,
@@ -18,7 +27,10 @@
             "author": "Dustin's Gamble",
             "genre": "Romance",
             "imageUrl": "https://s3-alpha-sig.figma.com/img/4053/9eff/4dae9f901dbd7be79aafae929dbd9474?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CjslKGenTRKtuQo7VivxOTO-quXBEUajXX7F9XK0HKBJMx7090hPtgkwjSd12XShbHuJRRq3zgYxDkR0ZgMoSKGZTU-tpLK8CK4tWvdf43l3c40HCuTHzHZswzty69wuSAu~Tl88TyiHA3ew8hgKTHpDpOacB~AFemITBdWKMvaLIvL3hSkqx-w~-y2ESf-Gu~4cFW8Iz4GQ5292fjaKHSGSymTSWNz64t~VxR8yGbGVT-E2a72PF3CrtT~F01~jeBEKO5zjWNrmz55nz8r0fqoNbYNZCKG8FG~0TdoNIF3nyFJemyfACNSIdBraIyJem1sx-cirL7T4H6P5RpKZzg__",
-            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/2wife2.m3u8"
+            "playlistUrls": [
+              "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/3wife3.m3u8",
+              "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/4wife4.m3u8"
+            ]
           }
         ]
       },
@@ -31,7 +43,16 @@
             "id": 3,
             "name": "Wolfstate chronicles: Alaska, Texas",
             "imageUrl": "https://s3-alpha-sig.figma.com/img/511f/aa2d/0449638fdb697bdfc0336e00a2e0feff?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ut4iv-K~4E53I9Xj4c9Vh~vPa90IgSXDiiwXwwflXVbLlnlTzOwowTgFFlIONVR1aLKySNHBcfbLHWvv5YDJUexcwRXX7CJ4M4fcHTAV7wVYXBDaufyRfjfbM-RR1zpxBTwWNVJ0Twcj~BRfbnxCanPsCB6mekSmY85Sd09hrkR702Jt1dOuQ2KckThnzASvaA2r6iEUgUWl78Qy-mrwdn4rJ5KYYyLfyINuoc~wI2eTmj9y85jauj3L8Y9w7j89Do9aP-Qj~tvb-79kY8uZ-~vuJdPTPiJk0x9yN8OVYRvvFxOCotOPl6r8~4pk6GH5gYq1hBMV8ZPKJvAUK6bUMg__",
-            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/3wife3.m3u8",
+            "playlists": [
+              {
+                "id": 3,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/5wife5.m3u8"
+              },
+              {
+                "id": 4,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/6wife6.m3u8"
+              }
+            ],
             "released": true
           },
           {
@@ -59,7 +80,16 @@
             "id": 6,
             "name": "Alpha's Detective",
             "imageUrl": "https://s3-alpha-sig.figma.com/img/2fc6/17b3/70556d9c29241d1a31bc4b92e41d0e02?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W7IzCFnC0TbV-ObVl-a3ddYdqh~6ePohUDx-YdnMzCT37eERvNTj2SQNbrVRCtr5DeCH7qlkAMnEg-8bxR3YhM9hGCpk9M-4kxGS5DR1BxagGWFODLql~95reJPQjwIkoAuY-XXLHJIo7WrFiTLjXpJZXH0v~WtAyKwGbL8TyyiR23-ZaqNepKMrkm1wW64SoJWcHVYYvMs7KZHMEEDiWsHCcHbSAvQPXXypEiP4NGZ89-1QBS1dUT3zT2lQ16BBjAEXXwv7y3YXREPqjE6JemunTFLQOtOwyRegxgfb~N6aHvsq2FSZkSLico4GmvbpCrROgRSiR3Qn5zQqOnhsGA__",
-            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/4wife4.m3u8",
+            "playlists": [
+              {
+                "id": 5,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/7wife7.m3u8"
+              },
+              {
+                "id": 6,
+                "url": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/8wife8.m3u8"
+              }
+            ],
             "released": true
           },
           {
