@@ -1,3 +1,3 @@
-export type HeaderIcon = 'search';
+export type HeaderIcon = 'search' | 'close';
 
 export type BookCardIcon = 'lock';
