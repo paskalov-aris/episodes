@@ -11,6 +11,7 @@ export const BookCard: FC<BookCardProps> = ({
   imageUrl,
   released,
   releaseDate,
+  additionalContainerStyle,
 }) => {
   const blurRadius = !released ? COMING_SOON_BLUR_RADIUS : NO_BLUR;
 
@@ -19,7 +20,7 @@ export const BookCard: FC<BookCardProps> = ({
   const source = { uri: imageUrl };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, additionalContainerStyle]}>
       <View>
         {!released && <LockIcon />}
         <Image
