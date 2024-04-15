@@ -3,4 +3,5 @@ import { Book } from '../../models/Book';
 
 export interface BannerProps extends Book {
   additionalContainerStyle?: ViewStyle;
+  onBannerPress?: (playlistUrl: string) => void;
 }
