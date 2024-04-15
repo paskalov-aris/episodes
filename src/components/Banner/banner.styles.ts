@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     opacity: 0.6,
   },
   container: {
-    width: '100%',
+    width: 328,
     height: 216,
   },
   backgroundImage: {

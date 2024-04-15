@@ -3,9 +3,12 @@ import { COLORS } from '../../constants/colors';
 import { NUNITO_SANS } from '../../constants/fonts';
 
 export const styles = StyleSheet.create({
-  bookCover: {
+  container: {
     width: 120,
+  },
+  bookCover: {
     height: 150,
+    width: '100%',
     marginBottom: 8,
     borderRadius: 8,
   },

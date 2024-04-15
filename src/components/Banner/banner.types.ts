@@ -1,3 +1,6 @@
+import { ViewStyle } from 'react-native';
 import { Book } from '../../models/Book';
 
-export type BannerProps = Book;
+export interface BannerProps extends Book {
+  additionalContainerStyle?: ViewStyle;
+}

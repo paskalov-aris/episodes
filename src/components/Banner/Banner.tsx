@@ -5,11 +5,17 @@ import LinearGradient from 'react-native-linear-gradient';
 import { styles } from './banner.styles';
 import { OVERLAY_COLORS } from './banner.settings';
 
-export const Banner: FC<BannerProps> = ({ name, author, genre, imageUrl }) => {
+export const Banner: FC<BannerProps> = ({
+  name,
+  author,
+  genre,
+  imageUrl,
+  additionalContainerStyle,
+}) => {
   const imageSource = { uri: imageUrl };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, additionalContainerStyle]}>
       <ImageBackground
         source={imageSource}
         style={styles.backgroundImage}

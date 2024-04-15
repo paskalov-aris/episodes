@@ -1,3 +1,6 @@
+import { ViewStyle } from 'react-native';
 import { Book } from '../../models/Book';
 
-export type BookCardProps = Book;
+export interface BookCardProps extends Book {
+  additionalContainerStyle?: ViewStyle;
+}
