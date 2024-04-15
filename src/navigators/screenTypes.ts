@@ -9,6 +9,7 @@ export type RootStackParamList = {
   Home: undefined;
   ViewEpisodes: {
     playlists: Playlist[];
+    currentEpisode?: number;
   };
 };
 
