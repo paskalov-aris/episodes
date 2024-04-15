@@ -9,6 +9,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.darkGray,
   },
+  wrapper: {
+    flex: 1,
+    width: '100%',
+    paddingHorizontal: 16,
+  },
   text: {
     color: COLORS.white,
     fontFamily: NUNITO_SANS.regular,

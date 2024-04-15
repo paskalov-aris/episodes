@@ -1,0 +1,82 @@
+{
+    "sections": [
+      {
+        "id": 1,
+        "type": "bannerCarousel",
+        "books": [
+          {
+            "id": 1,
+            "name": "Lethal Limits",
+            "author": "Dustin's Gamble",
+            "genre": "Romance",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/4053/9eff/4dae9f901dbd7be79aafae929dbd9474?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CjslKGenTRKtuQo7VivxOTO-quXBEUajXX7F9XK0HKBJMx7090hPtgkwjSd12XShbHuJRRq3zgYxDkR0ZgMoSKGZTU-tpLK8CK4tWvdf43l3c40HCuTHzHZswzty69wuSAu~Tl88TyiHA3ew8hgKTHpDpOacB~AFemITBdWKMvaLIvL3hSkqx-w~-y2ESf-Gu~4cFW8Iz4GQ5292fjaKHSGSymTSWNz64t~VxR8yGbGVT-E2a72PF3CrtT~F01~jeBEKO5zjWNrmz55nz8r0fqoNbYNZCKG8FG~0TdoNIF3nyFJemyfACNSIdBraIyJem1sx-cirL7T4H6P5RpKZzg__",
+            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/convertedwife.m3u8"
+          },
+          {
+            "id": 2,
+            "name": "Lethal Limits",
+            "author": "Dustin's Gamble",
+            "genre": "Romance",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/4053/9eff/4dae9f901dbd7be79aafae929dbd9474?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CjslKGenTRKtuQo7VivxOTO-quXBEUajXX7F9XK0HKBJMx7090hPtgkwjSd12XShbHuJRRq3zgYxDkR0ZgMoSKGZTU-tpLK8CK4tWvdf43l3c40HCuTHzHZswzty69wuSAu~Tl88TyiHA3ew8hgKTHpDpOacB~AFemITBdWKMvaLIvL3hSkqx-w~-y2ESf-Gu~4cFW8Iz4GQ5292fjaKHSGSymTSWNz64t~VxR8yGbGVT-E2a72PF3CrtT~F01~jeBEKO5zjWNrmz55nz8r0fqoNbYNZCKG8FG~0TdoNIF3nyFJemyfACNSIdBraIyJem1sx-cirL7T4H6P5RpKZzg__",
+            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/2wife2.m3u8"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "bookCarousel",
+        "title": "Trending Now",
+        "books": [
+          {
+            "id": 3,
+            "name": "Wolfstate chronicles: Alaska, Texas",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/511f/aa2d/0449638fdb697bdfc0336e00a2e0feff?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ut4iv-K~4E53I9Xj4c9Vh~vPa90IgSXDiiwXwwflXVbLlnlTzOwowTgFFlIONVR1aLKySNHBcfbLHWvv5YDJUexcwRXX7CJ4M4fcHTAV7wVYXBDaufyRfjfbM-RR1zpxBTwWNVJ0Twcj~BRfbnxCanPsCB6mekSmY85Sd09hrkR702Jt1dOuQ2KckThnzASvaA2r6iEUgUWl78Qy-mrwdn4rJ5KYYyLfyINuoc~wI2eTmj9y85jauj3L8Y9w7j89Do9aP-Qj~tvb-79kY8uZ-~vuJdPTPiJk0x9yN8OVYRvvFxOCotOPl6r8~4pk6GH5gYq1hBMV8ZPKJvAUK6bUMg__",
+            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/3wife3.m3u8",
+            "released": true
+          },
+          {
+            "id": 4,
+            "name": "Beautiful Revenge",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/aefa/5366/325d506fabba5365b8fc1f627162a019?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=k4M80x47FlUqgQJUth2t0I59EdWIVZpVCcYR-vLxFnOyi08VaDZI~DK2EqhU8hx1JAmxYY2u5kNrdPscUTeDUUvI7tb1oaD~DmGpr26o9NTpIubogSdyTOBlol6h5GSmV52fnfvsNInVVstBWA82RiIwYfkKpCQj0O441ojRIDec~atmks1dCtE19tMrQp-Nf8HLdgZLwn1RNWQerlRhfLzmUzQt3BXPAKL3j7oGtFWZbBBSnHDi7gQQdO219ExOF9d-kgZ8itTklPZIFqmU78013sCgKKWQc9kRJbyUOo0j8Q10Y~TabxPFbv61TU9Bbhifzzc4Up2~jyVJ7Md49g__",
+            "released": false,
+            "releaseDate": "2024-07-02"
+          },
+          {
+            "id": 5,
+            "name": "Sin De Rella",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/53b2/8243/8d53bf67458d55e566f64d47fb7b2aaf?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Pa2GTVc6aTydZTZaSPf3YBWRjwbhF7ulFzjXlcIToXTUceMsu0b~8qgX6VuLZUE~wbb2PABkL2hQvaZRyVQ5SQ7gdFqcn3Xq7ZHYvP8JSIs-zddS8aaJScFULVMc~PL4W~arJgQpJGZKEhOeCFokwPzqc~MvpVN~A4PNNk-a5alyqQyZFq985VihM8-rqikbNVcODTilwaeV~rMNG9oCkvm~3KpiZwLnslIq0XXeCCsD9iB304AnG4YGRT~Bh17kk-QIsmDAyJ9pniS~KzOyjrFJyiY9olR721EKNNyQ0Lypyh8jrRfNIFB1slck7EheeOr0MK6U0FcrglmgpQRsRA__",
+            "released": false,
+            "releaseDate": "2024-07-2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "bookCarousel",
+        "title": "Top Romance",
+        "books": [
+          {
+            "id": 6,
+            "name": "Alpha's Detective",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/2fc6/17b3/70556d9c29241d1a31bc4b92e41d0e02?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W7IzCFnC0TbV-ObVl-a3ddYdqh~6ePohUDx-YdnMzCT37eERvNTj2SQNbrVRCtr5DeCH7qlkAMnEg-8bxR3YhM9hGCpk9M-4kxGS5DR1BxagGWFODLql~95reJPQjwIkoAuY-XXLHJIo7WrFiTLjXpJZXH0v~WtAyKwGbL8TyyiR23-ZaqNepKMrkm1wW64SoJWcHVYYvMs7KZHMEEDiWsHCcHbSAvQPXXypEiP4NGZ89-1QBS1dUT3zT2lQ16BBjAEXXwv7y3YXREPqjE6JemunTFLQOtOwyRegxgfb~N6aHvsq2FSZkSLico4GmvbpCrROgRSiR3Qn5zQqOnhsGA__",
+            "playlistUrl": "https://dj0vkl2i4vsbo.cloudfront.net/convert/wife_caught_husband/converted/4wife4.m3u8",
+            "released": true
+          },
+          {
+            "id": 7,
+            "name": "Trained for Seduction",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/1d60/239c/fde32a5a7ba44fbb0addfb135575d56c?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=leFiVfF4cKL7UwdkksvdOcZZTbwaOHZsELnIK4YBqaO-eJVBVGjtWjIJ~N5OggcNQrp9hFj35tl9F31mzq2Cktdur~SljtUWwvl9e8mmOkEzg39XooPE6cuHXBBiK8ZWKiq2iY79wJVzSOtJYTBOwdStjahc-u65DhA~P655ms9TDnkIG6KEe1kCxXfWXmwXQP1rpwZu19YGih9ZpNs4RN1Vgoz9xEsDHZcYn5dz484g258N0YF3eUF1PFfD1h0vRJi~kLJxXRM7xbrZlDrT4~ssFTlHeflooqrS1JqYQydNdyN2jUp4C-QBX13DRCWBHrbSsHkuKz7RDY3htj9LyA__",
+            "released": false,
+            "releaseDate": "2024-07-02"
+          },
+          {
+            "id": 8,
+            "name": "Crescent",
+            "imageUrl": "https://s3-alpha-sig.figma.com/img/8aa7/99d2/117b97af02ec86621dc26a685e81f325?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NW3Q6P5hpxCKdlLA5oprUEgQLvLgjp1ZAJgTiKiZUH9In7DuXWRt5RJ~YF2eR9x04xk-pCWgh2rKL6WFWL5C9YPEFF5YT86Gy3F8N~vSOZ57KhIdXDpvW462FK2d6VwTzoKPBppJWPUUbwCYPMbcNzlufdNpICotWXAOZYPtDSqkdoPMXyLWyr6JiP7DmHJk7ghOXlQyLOoH50JXNlT5CusJmsTyev9nfWTA9ttqM-fFkXtB2m-1cVJoabBX-tvLWBAfYQ2VkvaLmxdLMa2oTc67eSWQTdUNwdcSZEdODQwZZkxJwAoHXlKfG6er8xVKX-zKaskQI-pWJNiFgAK2zA__",
+            "released": false,
+            "releaseDate": "2024-07-02"
+          }
+        ]
+      }
+    ]
+  }
