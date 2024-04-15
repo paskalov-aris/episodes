@@ -8,20 +8,22 @@ import { styles } from './bookCard.styles';
 
 export const BookCard: FC<BookCardProps> = ({
   name,
-  image,
-  isComingSoon,
+  imageUrl,
+  released,
   releaseDate,
 }) => {
-  const blurRadius = isComingSoon ? COMING_SOON_BLUR_RADIUS : NO_BLUR;
+  const blurRadius = !released ? COMING_SOON_BLUR_RADIUS : NO_BLUR;
 
-  const shouldRenderReleaseDate = isComingSoon && releaseDate;
+  const shouldRenderReleaseDate = !released && !!releaseDate;
+
+  const source = { uri: imageUrl };
 
   return (
-    <View>
+    <View style={styles.container}>
       <View>
-        {isComingSoon && <LockIcon />}
+        {!released && <LockIcon />}
         <Image
-          source={image}
+          source={source}
           style={styles.bookCover}
           blurRadius={blurRadius}
         />
