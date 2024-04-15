@@ -19,6 +19,7 @@ export const VIEW_EPISODES_SCREEN_OPTIONS: RootStackScreenOptions<
   headerStyle: {
     backgroundColor: COLORS.darkGray,
   },
+  headerBackVisible: false,
   headerTitle: props => <HeaderTitle align="center" {...props} />,
   headerLeft: props => (
     <HeaderLeftButton {...props} onPress={navigation.goBack} />
