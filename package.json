@@ -7,7 +7,19 @@
     "ios": "react-native run-ios",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "packages:install": "yarn install",
+    "packages:uninstall": "rm -rf node_modules/",
+    "packages:reinstall": "yarn run packages:uninstall && yarn run packages:install",
+    "gems:install": "bundle install --path vendor/bundle",
+    "gems:uninstall": "rm -rf vendor/ .bundle/",
+    "gems:reinstall": "yarn run gems:uninstall && yarn run gems:install",
+    "pods:install": "bundle exec pod install",
+    "pods:uninstall": "rm -rf ios/Pods/",
+    "pods:reinstall": "yarn run pods:uninstall && yarn run pods:install",
+    "deps:install": "yarn run packages:install && yarn run pods:install",
+    "deps:uninstall": "yarn run packages:uninstall && yarn run pods:uninstall",
+    "deps:reinstall": "yarn run deps:uninstall && yarn run deps:install"
   },
   "dependencies": {
     "@react-native-firebase/app": "^19.1.2",
