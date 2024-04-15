@@ -12,7 +12,7 @@ export const BookCard: FC<BookCardProps> = ({
   released,
   releaseDate,
   additionalContainerStyle,
-  playlistUrl,
+  playlists,
   onBookCardPress,
 }) => {
   const blurRadius = !released ? COMING_SOON_BLUR_RADIUS : NO_BLUR;
@@ -23,8 +23,8 @@ export const BookCard: FC<BookCardProps> = ({
   const source = { uri: imageUrl };
 
   const handleBookCardPress = () => {
-    if (onBookCardPress && playlistUrl) {
-      onBookCardPress(playlistUrl);
+    if (onBookCardPress && playlists?.length) {
+      onBookCardPress(playlists);
     } else {
       Alert.alert('No playlist URL provided');
     }

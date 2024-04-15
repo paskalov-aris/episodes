@@ -17,14 +17,14 @@ export const Banner: FC<BannerProps> = ({
   genre,
   imageUrl,
   additionalContainerStyle,
-  playlistUrl,
+  playlists,
   onBannerPress,
 }) => {
   const imageSource = { uri: imageUrl };
 
   const handleBannerPress = () => {
-    if (onBannerPress && playlistUrl) {
-      onBannerPress(playlistUrl);
+    if (onBannerPress && playlists?.length) {
+      onBannerPress(playlists);
     } else {
       Alert.alert('No playlist URL provided');
     }
