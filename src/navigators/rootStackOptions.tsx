@@ -15,12 +15,23 @@ export const HOME_SCREEN_OPTIONS: NativeStackNavigationOptions = {
 
 export const VIEW_EPISODES_SCREEN_OPTIONS: RootStackScreenOptions<
   'ViewEpisodes'
-> = ({ navigation }) => ({
+> = ({
+  navigation,
+  route: {
+    params: { currentEpisode = 1 },
+  },
+}) => ({
   headerStyle: {
     backgroundColor: COLORS.darkGray,
   },
   headerBackVisible: false,
-  headerTitle: props => <HeaderTitle align="center" {...props} />,
+  headerTitle: props => (
+    <HeaderTitle
+      align="center"
+      customTitle={`Episode ${currentEpisode}`}
+      {...props}
+    />
+  ),
   headerLeft: props => (
     <HeaderLeftButton {...props} onPress={navigation.goBack} />
   ),
