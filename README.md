@@ -35,11 +35,6 @@ or
 
 # To Do
 
-## Mock data
-As I've encountered some issues with getting mock data from Firebase Remote Config parameter, I decided to temporarily contain the data in the `sections.json` file
-
-TODO: https://github.com/paskalov-aris/episodes/issues/22
-
 ## Playing m3u8 playlist episodes
 
 On the `ViewEpisodesScreen` I've tried to fetch the m3u8 playlist files to parse them, extract and render episodes. For the video rendering, the [Expo Video](https://katherineoelsner.com/) module is used. The issue I've encountered is that I couldn't render videos in the MPEG-TS format. Need more time to investigate.
@@ -48,8 +43,6 @@ So, in order to implement at least some functionality, I decided to play entire 
 
 TODO: https://github.com/paskalov-aris/episodes/issues/23
 
-## "Continue watching" functionality
+## View Episodes Screen. Incorrect scroll offset
 
-Implement the feature using Redux Toolkit and Redux Persist
-
-TODO: https://github.com/paskalov-aris/episodes/issues/24
+TODO: https://github.com/paskalov-aris/episodes/issues/33
