@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StyleSheet } from 'react-native';
 import { remoteConfigService } from './src/services/firebase/remoteConfig/remoteConfigService';
+import { ContinueWatchingProvider } from './src/containers/ContinueWatchingProvider/ContinueWatchingProvider';
 
 function App(): React.JSX.Element {
   useEffect(() => {
@@ -18,7 +19,9 @@ function App(): React.JSX.Element {
   return (
     <GestureHandlerRootView style={styles.wrapper}>
       <NavigationContainer>
-        <RootStackNavigator />
+        <ContinueWatchingProvider>
+          <RootStackNavigator />
+        </ContinueWatchingProvider>
       </NavigationContainer>
     </GestureHandlerRootView>
   );

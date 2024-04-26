@@ -6,9 +6,7 @@ import { styles } from './continueWatchingCard.styles';
 import { ARROW_RIGHT_ICON_SIZE } from './continueWatchingCard.settings';
 
 export const ContinueWatchingCard: FC<ContinueWatchingCardProps> = ({
-  bookImageUrl,
-  bookName,
-  bookAuthor,
+  data: { bookImageUrl, bookName, bookAuthor },
   onCardPress,
 }) => {
   const imageUrl = { uri: bookImageUrl };

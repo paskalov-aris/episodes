@@ -1,6 +1,6 @@
+import { ContinueWatching } from '../../models/Section';
+
 export interface ContinueWatchingCardProps {
-  bookName: string;
-  bookAuthor: string;
-  bookImageUrl: string;
+  data: ContinueWatching;
   onCardPress?: () => void;
 }

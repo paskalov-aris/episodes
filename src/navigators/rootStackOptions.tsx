@@ -18,7 +18,7 @@ export const VIEW_EPISODES_SCREEN_OPTIONS: RootStackScreenOptions<
 > = ({
   navigation,
   route: {
-    params: { currentEpisode = 1 },
+    params: { screenTitle = 'Episode 1' },
   },
 }) => ({
   headerStyle: {
@@ -26,11 +26,7 @@ export const VIEW_EPISODES_SCREEN_OPTIONS: RootStackScreenOptions<
   },
   headerBackVisible: false,
   headerTitle: props => (
-    <HeaderTitle
-      align="center"
-      customTitle={`Episode ${currentEpisode}`}
-      {...props}
-    />
+    <HeaderTitle align="center" customTitle={screenTitle} {...props} />
   ),
   headerLeft: props => (
     <HeaderLeftButton {...props} onPress={navigation.goBack} />

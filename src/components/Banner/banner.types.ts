@@ -1,8 +1,8 @@
 import { ViewStyle } from 'react-native';
 import { Book } from '../../models/Book';
-import { Playlist } from '../../models/Playlist';
+import { UseCreateContinueWatchingSectionArgs } from '../../hooks/useCreateContinueWatchingSection/useCreateContinueWatchingSection.types';
 
 export interface BannerProps extends Book {
   additionalContainerStyle?: ViewStyle;
-  onBannerPress?: (playlists: Playlist[]) => void;
+  onBannerPress?: (args: UseCreateContinueWatchingSectionArgs) => void;
 }
