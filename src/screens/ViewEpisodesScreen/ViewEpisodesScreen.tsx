@@ -7,33 +7,44 @@ import {
 } from 'react-native';
 import { useHeaderHeight } from '@react-navigation/elements';
 import { styles } from './viewEpisodesScreen.styles';
-import { FC, useCallback, useRef } from 'react';
+import { FC, useCallback, useContext, useEffect, useRef } from 'react';
 import { ViewEpisodesScreenProps } from '../../navigators/screenTypes';
 import { Video, ResizeMode } from 'expo-av';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { OnViewableItemsChangedArgs } from './viewEpisodesScreen.types';
 import { VIEWABILITY_CONFIG } from './viewEpisodesScreen.settings';
 import { Playlist } from '../../models/Playlist';
+import { asyncStorageService } from '../../services/asyncStorage/asyncStorageService';
+import { useFocusEffect } from '@react-navigation/native';
+import { ContinueWatchingContext } from '../../contexts/ContinueWatchingContext';
 
 const keyExtractor = (item: { id: number }) => item.id.toString();
 
 export const ViewEpisodesScreen: FC<ViewEpisodesScreenProps> = ({
   navigation,
   route: {
-    params: { playlists },
+    params: { playlists = [], currentVideoIndex = 0, positionMillis = 0 },
   },
 }) => {
+  const flatListRef = useRef<FlatList>(null);
   const playlistRefs = useRef<Video[]>([]);
 
   const headerHeight = useHeaderHeight();
   const insets = useSafeAreaInsets();
 
-  const playlistHeight =
-    Dimensions.get('window').height - headerHeight - insets.bottom;
+  const screenHeight = Dimensions.get('window').height;
+  const playlistHeight = screenHeight - headerHeight - insets.bottom;
+
+  const { continueWatchingSection, setContinueWatchingSection } = useContext(
+    ContinueWatchingContext,
+  );
 
   const setCurrentEpisodeIndexToNavigationParams = (index: number) => {
+    const episodeNumber = index + 1;
+
     navigation.setParams({
-      currentEpisode: index,
+      screenTitle: `Episode ${episodeNumber}`,
+      currentVideoIndex: index,
     });
   };
 
@@ -43,15 +54,18 @@ export const ViewEpisodesScreen: FC<ViewEpisodesScreenProps> = ({
   }: OnViewableItemsChangedArgs) => {
     const currentViewableItem = viewableItems[0];
     const currentViewableItemIndex = currentViewableItem?.index;
-    const index = currentViewableItemIndex ? currentViewableItemIndex + 1 : 1;
-    setCurrentEpisodeIndexToNavigationParams(index);
+    setCurrentEpisodeIndexToNavigationParams(currentViewableItemIndex || 0);
 
     changed.forEach(viewableItem => {
-      const viewableItemRef = playlistRefs.current[Number(viewableItem.key)];
+      const viewableItemRef = playlistRefs.current[viewableItem.index || 0];
 
       if (viewableItemRef) {
         if (viewableItem.isViewable) {
-          viewableItemRef.playAsync();
+          if (positionMillis && viewableItem.index === currentVideoIndex) {
+            viewableItemRef.playFromPositionAsync(positionMillis);
+          } else {
+            viewableItemRef.playAsync();
+          }
         } else {
           viewableItemRef.pauseAsync();
         }
@@ -59,8 +73,68 @@ export const ViewEpisodesScreen: FC<ViewEpisodesScreenProps> = ({
     });
   };
 
+  const getItemLayout = useCallback(
+    (_: unknown, index: number) => {
+      return {
+        length: playlistHeight,
+        offset: playlistHeight * index,
+        index,
+      };
+    },
+    [playlistHeight],
+  );
+
+  useFocusEffect(
+    useCallback(() => {
+      if (currentVideoIndex && currentVideoIndex <= playlists.length) {
+        flatListRef.current?.scrollToIndex({
+          animated: true,
+          index: currentVideoIndex,
+        });
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [playlists.length]),
+  );
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('beforeRemove', async () => {
+      try {
+        const currentPlaylistRef = playlistRefs.current[currentVideoIndex];
+        const playbackStatus = await currentPlaylistRef.getStatusAsync();
+
+        if (playbackStatus.isLoaded && continueWatchingSection) {
+          setContinueWatchingSection?.({
+            ...continueWatchingSection,
+            data: {
+              ...continueWatchingSection.data,
+              currentVideoIndex: currentVideoIndex,
+              positionMillis: playbackStatus.positionMillis,
+            },
+          });
+          asyncStorageService.mergeData('continueWatchingSection', {
+            data: {
+              playlists: playlists,
+              currentVideoIndex: currentVideoIndex,
+              positionMillis: playbackStatus.positionMillis,
+            },
+          });
+        }
+      } catch (error) {
+        // TODO: handle error
+      }
+    });
+
+    return unsubscribe;
+  }, [
+    continueWatchingSection,
+    currentVideoIndex,
+    navigation,
+    playlists,
+    setContinueWatchingSection,
+  ]);
+
   const renderItem = useCallback(
-    ({ item }: ListRenderItemInfo<Playlist>) => (
+    ({ item, index }: ListRenderItemInfo<Playlist>) => (
       <View style={{ height: playlistHeight }}>
         <Video
           source={{
@@ -71,7 +145,7 @@ export const ViewEpisodesScreen: FC<ViewEpisodesScreenProps> = ({
           resizeMode={ResizeMode.COVER}
           style={styles.backgroundVideo}
           ref={(playlistRef: Video) => {
-            playlistRefs.current[item.id] = playlistRef;
+            playlistRefs.current[index] = playlistRef;
           }}
         />
       </View>
@@ -82,6 +156,8 @@ export const ViewEpisodesScreen: FC<ViewEpisodesScreenProps> = ({
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
+        ref={flatListRef}
+        getItemLayout={getItemLayout}
         data={playlists}
         renderItem={renderItem}
         viewabilityConfig={VIEWABILITY_CONFIG}

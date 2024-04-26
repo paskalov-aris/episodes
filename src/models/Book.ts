@@ -5,7 +5,7 @@ export interface Book {
   name: string;
   imageUrl: string;
   playlists?: Playlist[];
-  author?: string;
+  author: string;
   genre?: string;
   released?: boolean;
   releaseDate?: string;

@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: COLORS.blueSecondary,
-    height: 68,
+    minHeight: 68,
     width: '100%',
     paddingVertical: 6,
     paddingLeft: 6,
@@ -31,6 +31,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 20,
     marginBottom: 4,
+    maxWidth: 200,
   },
   bookAuthor: {
     color: COLORS.lightGrayFourth,

@@ -9,7 +9,9 @@ export type RootStackParamList = {
   Home: undefined;
   ViewEpisodes: {
     playlists: Playlist[];
-    currentEpisode?: number;
+    screenTitle?: string;
+    currentVideoIndex?: number;
+    positionMillis?: number;
   };
 };
 
@@ -32,3 +34,10 @@ export type ViewEpisodesScreenProps = NativeStackScreenProps<
   RootStackParamList,
   'ViewEpisodes'
 >;
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
+}

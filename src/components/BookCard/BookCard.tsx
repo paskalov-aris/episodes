@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { BookCardProps } from './bookCard.types';
-import { Alert, Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
 import { COMING_SOON_BLUR_RADIUS, NO_BLUR } from './bookCard.settings';
 import { ReleaseDateLabel } from './ReleaseDateLabel/ReleaseDateLabel';
 import { LockIcon } from './LockIcon/LockIcon';
@@ -13,6 +13,7 @@ export const BookCard: FC<BookCardProps> = ({
   releaseDate,
   additionalContainerStyle,
   playlists,
+  author,
   onBookCardPress,
 }) => {
   const blurRadius = !released ? COMING_SOON_BLUR_RADIUS : NO_BLUR;
@@ -23,10 +24,13 @@ export const BookCard: FC<BookCardProps> = ({
   const source = { uri: imageUrl };
 
   const handleBookCardPress = () => {
-    if (onBookCardPress && playlists?.length) {
-      onBookCardPress(playlists);
-    } else {
-      Alert.alert('No playlist URL provided');
+    if (onBookCardPress) {
+      onBookCardPress({
+        playlists: playlists || [],
+        bookName: name,
+        bookImageUrl: imageUrl,
+        bookAuthor: author,
+      });
     }
   };
 
